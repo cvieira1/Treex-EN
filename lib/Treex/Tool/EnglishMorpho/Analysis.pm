@@ -1,6 +1,6 @@
 package Treex::Tool::EnglishMorpho::Analysis;
-BEGIN {
-  $Treex::Tool::EnglishMorpho::Analysis::VERSION = '0.06903_1';
+{
+  $Treex::Tool::EnglishMorpho::Analysis::VERSION = '0.07191';
 }
 use Moose;
 
@@ -178,7 +178,7 @@ Treex::Tool::EnglishMorpho::Analysis - rule based morphological analyzer for Eng
 
 =head1 VERSION
 
-version 0.06903_1
+version 0.07191
 
 =head1 SYNOPSIS
 

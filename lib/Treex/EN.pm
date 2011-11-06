@@ -1,6 +1,6 @@
 package Treex::EN;
-BEGIN {
-  $Treex::EN::VERSION = '0.06903_1';
+{
+  $Treex::EN::VERSION = '0.07191';
 }
 use strict;
 use warnings;
@@ -19,7 +19,7 @@ Treex::EN - collection of blocks for processing English
 
 =head1 VERSION
 
-version 0.06903_1
+version 0.07191
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package Treex::Block::W2A::EN::NormalizeForms;
-BEGIN {
-  $Treex::Block::W2A::EN::NormalizeForms::VERSION = '0.06903_1';
+{
+  $Treex::Block::W2A::EN::NormalizeForms::VERSION = '0.07191';
 }
 use utf8;
 use Moose;
@@ -44,7 +44,7 @@ Treex::Block::W2A::EN::NormalizeForms - normalize some wordforms
 
 =head1 VERSION
 
-version 0.06903_1
+version 0.07191
 
 =head1 DESCRIPTION
 

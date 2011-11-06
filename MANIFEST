@@ -17,6 +17,9 @@ lib/Treex/Tool/EnglishMorpho/exceptions.tsv
 lib/Treex/Tool/EnglishMorpho/negation
 lib/Treex/Tool/Segment/EN/RuleBased.pm
 perlcritic.rc
+sample-cs.txt
+sample-en.txt
+sample.treex
 share/examples/sample-en.txt
 share/examples/sample-longer.txt
 share/examples/sample.scen
@@ -29,12 +32,14 @@ t/release-cpan-changes.t
 t/release-dist-manifest.t
 t/release-distmeta.t
 t/release-eol.t
-t/release-has-version.t
 t/release-kwalitee.t
 t/release-minimum-version.t
+t/release-mojibake.t
 t/release-no-tabs.t
 t/release-pod-coverage.t
+t/release-pod-linkcheck.t
 t/release-pod-syntax.t
 t/release-portability.t
 t/release-synopsis.t
+t/release-test-version.t
 t/release-unused-vars.t
