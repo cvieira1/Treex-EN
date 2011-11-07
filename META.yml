@@ -30,9 +30,10 @@ requires:
   Treex::Core::Log: 0
   Treex::Core::Resource: 0
   Treex::Tool::Segment::RuleBased: 0
+  Treex::Unilang: 0.07194
   feature: 0
   perl: 5.010
   strict: 0
   utf8: 0
   warnings: 0
-version: 0.07191
+version: 0.07194

@@ -1,6 +1,6 @@
 package Treex::Block::W2A::EN::FixTags;
 {
-  $Treex::Block::W2A::EN::FixTags::VERSION = '0.07191';
+  $Treex::Block::W2A::EN::FixTags::VERSION = '0.07194';
 }
 use utf8;
 use Moose;
@@ -74,7 +74,7 @@ Treex::Block::W2A::EN::FixTags - Fixes tags for TectoMT purposes.
 
 =head1 VERSION
 
-version 0.07191
+version 0.07194
 
 =head1 DESCRIPTION
 

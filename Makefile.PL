@@ -40,12 +40,13 @@ my %WriteMakefileArgs = (
     "Treex::Core::Log" => 0,
     "Treex::Core::Resource" => 0,
     "Treex::Tool::Segment::RuleBased" => 0,
+    "Treex::Unilang" => "0.07194",
     "feature" => 0,
     "strict" => 0,
     "utf8" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.07191",
+  "VERSION" => "0.07194",
   "test" => {
     "TESTS" => "t/*.t"
   }
