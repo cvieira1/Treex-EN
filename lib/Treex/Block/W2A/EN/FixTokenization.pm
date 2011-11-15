@@ -1,6 +1,6 @@
 package Treex::Block::W2A::EN::FixTokenization;
 {
-  $Treex::Block::W2A::EN::FixTokenization::VERSION = '0.07194';
+  $Treex::Block::W2A::EN::FixTokenization::VERSION = '0.07297';
 }
 use Moose;
 use Treex::Core::Common;
@@ -74,7 +74,7 @@ Treex::Block::W2A::EN::FixTokenization - fix some issues in output of tokenizer
 
 =head1 VERSION
 
-version 0.07194
+version 0.07297
 
 =head1 DESCRIPTION
 

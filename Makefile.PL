@@ -34,19 +34,20 @@ my %WriteMakefileArgs = (
     "File::Slurp" => 0,
     "Lingua::EN::Tagger" => 0,
     "Moose" => 0,
+    "Treex::Block::W2A::ParseMSTperl" => 0,
     "Treex::Block::W2A::Tokenize" => 0,
     "Treex::Core::Block" => 0,
     "Treex::Core::Common" => 0,
     "Treex::Core::Log" => 0,
     "Treex::Core::Resource" => 0,
     "Treex::Tool::Segment::RuleBased" => 0,
-    "Treex::Unilang" => "0.07194",
+    "Treex::Unilang" => "0.07295",
     "feature" => 0,
     "strict" => 0,
     "utf8" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.07194",
+  "VERSION" => "0.07297",
   "test" => {
     "TESTS" => "t/*.t"
   }

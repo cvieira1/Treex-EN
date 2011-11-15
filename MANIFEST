@@ -1,13 +1,17 @@
 Changes
+Changes.template
 LICENSE
 MANIFEST
 META.yml
 Makefile.PL
 README
 lib/Treex/Block/W2A/EN/FixTags.pm
+lib/Treex/Block/W2A/EN/FixTagsAfterParse.pm
 lib/Treex/Block/W2A/EN/FixTokenization.pm
 lib/Treex/Block/W2A/EN/Lemmatize.pm
 lib/Treex/Block/W2A/EN/NormalizeForms.pm
+lib/Treex/Block/W2A/EN/ParseMSTperl.pm
+lib/Treex/Block/W2A/EN/SetIsMemberFromDeprel.pm
 lib/Treex/Block/W2A/EN/TagLinguaEn.pm
 lib/Treex/Block/W2A/EN/Tokenize.pm
 lib/Treex/EN.pm
@@ -23,7 +27,6 @@ sample.treex
 share/examples/sample-en.txt
 share/examples/sample-longer.txt
 share/examples/sample.scen
-share/examples/test.scen
 t/00-compile.t
 t/author-critic.t
 t/lingua_en.t

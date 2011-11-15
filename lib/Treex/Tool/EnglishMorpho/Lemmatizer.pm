@@ -1,6 +1,6 @@
 package Treex::Tool::EnglishMorpho::Lemmatizer;
 {
-  $Treex::Tool::EnglishMorpho::Lemmatizer::VERSION = '0.07194';
+  $Treex::Tool::EnglishMorpho::Lemmatizer::VERSION = '0.07297';
 }
 use Moose;
 use Treex::Core::Common;
@@ -302,7 +302,7 @@ Treex::Tool::EnglishMorpho::Lemmatizer - rule based lemmatizer for English
 
 =head1 VERSION
 
-version 0.07194
+version 0.07297
 
 =head1 SYNOPSIS
 

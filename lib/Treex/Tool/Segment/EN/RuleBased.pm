@@ -1,6 +1,6 @@
 package Treex::Tool::Segment::EN::RuleBased;
 {
-  $Treex::Tool::Segment::EN::RuleBased::VERSION = '0.07194';
+  $Treex::Tool::Segment::EN::RuleBased::VERSION = '0.07297';
 }
 use utf8;
 use Moose;

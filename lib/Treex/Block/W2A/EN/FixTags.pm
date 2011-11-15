@@ -1,6 +1,6 @@
 package Treex::Block::W2A::EN::FixTags;
 {
-  $Treex::Block::W2A::EN::FixTags::VERSION = '0.07194';
+  $Treex::Block::W2A::EN::FixTags::VERSION = '0.07297';
 }
 use utf8;
 use Moose;
@@ -21,8 +21,9 @@ sub process_anode {
 }
 
 sub _get_tag {
-    my ($self, $node) = @_;
+    my ( $self, $node ) = @_;
     my ( $form, $tag ) = $node->get_attrs( 'form', 'tag' );
+
     #my ( $form, $tag, $id ) = $node->get_attrs( 'form', 'tag', 'id' );
     # Abbreviations like MPs, CDs or DVDs should be tagged as plural proper noun
     return 'NNPS' if $tag =~ /^NN/ && $form =~ /^\p{IsUpper}{2,}s$/;
@@ -59,6 +60,11 @@ sub _get_tag {
     # '£' should have the same tag as '$' has
     return '$' if $form eq '£';
 
+    # In "There!" it is not an existential there, but simple adverb.
+    # Otherwise, we would get an empty t-tree for such sentences.
+    return 'RB' if $tag eq 'EX'
+            && join( '', map { $_->form } $node->get_root->get_descendants( { ordered => 1 } ) ) =~ /^There.?$/;
+
     return;
 }
 
@@ -74,7 +80,7 @@ Treex::Block::W2A::EN::FixTags - Fixes tags for TectoMT purposes.
 
 =head1 VERSION
 
-version 0.07194
+version 0.07297
 
 =head1 DESCRIPTION
 
