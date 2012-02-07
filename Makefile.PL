@@ -20,6 +20,7 @@ my %WriteMakefileArgs = (
     "File::Temp" => 0,
     "Readonly" => 0,
     "Test::More" => 0,
+    "Test::Requires" => 0,
     "Treex::Core::Document" => 0
   },
   "CONFIGURE_REQUIRES" => {
@@ -41,13 +42,13 @@ my %WriteMakefileArgs = (
     "Treex::Core::Log" => 0,
     "Treex::Core::Resource" => 0,
     "Treex::Tool::Segment::RuleBased" => 0,
-    "Treex::Unilang" => "0.07295",
+    "Treex::Unilang" => "0.08056",
     "feature" => 0,
     "strict" => 0,
     "utf8" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.07297",
+  "VERSION" => "0.08057",
   "test" => {
     "TESTS" => "t/*.t"
   }

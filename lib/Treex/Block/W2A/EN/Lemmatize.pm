@@ -1,6 +1,6 @@
 package Treex::Block::W2A::EN::Lemmatize;
 {
-  $Treex::Block::W2A::EN::Lemmatize::VERSION = '0.07297';
+  $Treex::Block::W2A::EN::Lemmatize::VERSION = '0.08057';
 }
 use Moose;
 use Treex::Core::Common;
@@ -42,7 +42,7 @@ Treex::Block::W2A::EN::Lemmatize - wrapper for rule based lemmatizer for English
 
 =head1 VERSION
 
-version 0.07297
+version 0.08057
 
 =head1 DESCRIPTION
 

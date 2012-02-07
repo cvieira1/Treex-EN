@@ -1,15 +1,18 @@
 package Treex::EN;
 {
-  $Treex::EN::VERSION = '0.07297';
+  $Treex::EN::VERSION = '0.08057';
 }
 use strict;
 use warnings;
-use Treex::Unilang 0.07295;
+use Treex::Unilang 0.08056;
 
 1;
 
 __END__
-
+#Module is here for synchronizing EN with Unilang
+#TODO - synopsis, example of parsing
+#a) from commandline
+#b) directly from perl
 =pod
 
 =encoding utf-8
@@ -20,13 +23,7 @@ Treex::EN - collection of blocks for processing English
 
 =head1 VERSION
 
-version 0.07297
-
-=head1 SYNOPSIS
-
- use Treex::EN;
-
- #TODO
+version 0.08057
 
 =head1 DESCRIPTION
 

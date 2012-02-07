@@ -1,6 +1,6 @@
 package Treex::Block::W2A::EN::TagLinguaEn;
 {
-  $Treex::Block::W2A::EN::TagLinguaEn::VERSION = '0.07297';
+  $Treex::Block::W2A::EN::TagLinguaEn::VERSION = '0.08057';
 }
 use 5.010;
 use feature qw(switch);

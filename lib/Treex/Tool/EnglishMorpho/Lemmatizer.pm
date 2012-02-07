@@ -1,6 +1,6 @@
 package Treex::Tool::EnglishMorpho::Lemmatizer;
 {
-  $Treex::Tool::EnglishMorpho::Lemmatizer::VERSION = '0.07297';
+  $Treex::Tool::EnglishMorpho::Lemmatizer::VERSION = '0.08057';
 }
 use Moose;
 use Treex::Core::Common;
@@ -302,7 +302,7 @@ Treex::Tool::EnglishMorpho::Lemmatizer - rule based lemmatizer for English
 
 =head1 VERSION
 
-version 0.07297
+version 0.08057
 
 =head1 SYNOPSIS
 
@@ -403,7 +403,7 @@ sci-fi -> sci-fus, Mitsubishi -> mitsubishus, Shanghai -> shanghaus,...
 
 =back
 
-=head1 AUTHO
+=head1 AUTHOR
 
 Martin Popel <popel@ufal.mff.cuni.cz>
 
