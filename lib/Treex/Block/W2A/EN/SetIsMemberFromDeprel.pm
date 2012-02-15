@@ -1,6 +1,6 @@
 package Treex::Block::W2A::EN::SetIsMemberFromDeprel;
-{
-  $Treex::Block::W2A::EN::SetIsMemberFromDeprel::VERSION = '0.08057';
+BEGIN {
+  $Treex::Block::W2A::EN::SetIsMemberFromDeprel::VERSION = '0.08171';
 }
 use Moose;
 use Treex::Core::Common;

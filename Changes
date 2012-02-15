@@ -1,5 +1,11 @@
 Revision history of the Treex-EN distribution:
 
+0.08171       2012-02-16
+    - added Featurama tagger
+
+0.08057       2012-02-07
+    - MSTperl parser was updated
+
 0.07297       2011-11-15
     - added MSTperl parser
 

@@ -1,11 +1,11 @@
 package Treex::Block::W2A::EN::ParseMSTperl;
-{
-  $Treex::Block::W2A::EN::ParseMSTperl::VERSION = '0.08057';
+BEGIN {
+  $Treex::Block::W2A::EN::ParseMSTperl::VERSION = '0.08171';
 }
 use Moose;
 extends 'Treex::Block::W2A::ParseMSTperl';
 
-has 'model_name' => ( is => 'ro', isa => 'Str', default => 'conll_2007' );
+has 'model_name' => ( is => 'ro', isa => 'Str', default => 'conll_2007_small' );
 has 'model_dir' => ( is => 'ro', isa => 'Str', default => "data/models/mst_perl_parser/en" );
 
 has 'alignment_language' => ( isa => 'Str', is => 'ro', default => 'cs' );
@@ -29,7 +29,7 @@ Treex::Block::W2A::EN::ParseMSTperl
 
 =head1 VERSION
 
-version 0.08057
+version 0.08171
 
 =head1 DECRIPTION
 

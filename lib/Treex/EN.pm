@@ -1,10 +1,10 @@
 package Treex::EN;
-{
-  $Treex::EN::VERSION = '0.08057';
+BEGIN {
+  $Treex::EN::VERSION = '0.08171';
 }
 use strict;
 use warnings;
-use Treex::Unilang 0.08056;
+use Treex::Unilang 0.08170;
 
 1;
 
@@ -15,7 +15,7 @@ __END__
 #b) directly from perl
 =pod
 
-=encoding utf-8
+=encoding utf8
 
 =head1 NAME
 
@@ -23,7 +23,7 @@ Treex::EN - collection of blocks for processing English
 
 =head1 VERSION
 
-version 0.08057
+version 0.08171
 
 =head1 DESCRIPTION
 
