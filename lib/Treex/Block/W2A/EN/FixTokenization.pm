@@ -1,7 +1,7 @@
 package Treex::Block::W2A::EN::FixTokenization;
-BEGIN {
-  $Treex::Block::W2A::EN::FixTokenization::VERSION = '0.08171';
-}
+$Treex::Block::W2A::EN::FixTokenization::VERSION = '0.13095';
+use strict;
+use warnings;
 use Moose;
 use Treex::Core::Common;
 extends 'Treex::Core::Block';
@@ -55,7 +55,7 @@ sub process_atree {
             $nodes[$i]->set_form($merged);
             $nodes[$i]->set_attr( 'gloss', 'merged' );
             $nodes[$i]->set_no_space_after( $nodes[ $i + $length ]->no_space_after );
-            
+
             foreach my $node ( @nodes[ $i + 1 .. $i + $length ] ) {
                 $node->remove();
             }
@@ -77,13 +77,13 @@ Treex::Block::W2A::EN::FixTokenization - fix some issues in output of tokenizer
 
 =head1 VERSION
 
-version 0.08171
+version 0.13095
 
 =head1 DESCRIPTION
 
 Some abbreviations (with periods) are merged into one token.
 For example I<"e. g."> is in Penn Treebank one token (with tag FW).
-Using only L<SEnglishW_to_SEnglishM::Penn_style_tokenization>
+Using only L<Treex::Block::W2A::EN::Tokenize>
 we get four tokens: I<e . g .> which may be distributed by the parser
 into different clauses. And this is hard to fix afterwards.
 

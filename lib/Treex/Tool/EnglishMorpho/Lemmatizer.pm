@@ -1,7 +1,7 @@
 package Treex::Tool::EnglishMorpho::Lemmatizer;
-BEGIN {
-  $Treex::Tool::EnglishMorpho::Lemmatizer::VERSION = '0.08171';
-}
+$Treex::Tool::EnglishMorpho::Lemmatizer::VERSION = '0.13095';
+use strict;
+use warnings;
 use Moose;
 use Treex::Core::Common;
 use Treex::Core::Resource qw(require_file_from_share);
@@ -302,13 +302,17 @@ Treex::Tool::EnglishMorpho::Lemmatizer - rule based lemmatizer for English
 
 =head1 VERSION
 
-version 0.08171
+version 0.13095
 
 =head1 SYNOPSIS
 
  use Treex::Tool::EnglishMorpho::Lemmatizer;
+ my $lemmatizer    = Treex::Tool::EnglishMorpho::Lemmatizer->new();
  my ($word,  $tag) = qw( goes VBZ );
- my ($lemma, $neg) = Treex::Tool::EnglishMorpho::Lemmatizer::lemmatize($word, $tag);
+ my ($lemma, $neg) = $lemmatizer->lemmatize($word, $tag);
+ # $lemma = 'go', $neg = 0
+ ($lemma, $neg) = $lemmatizer->lemmatize('unhappy', 'JJ');
+ # $lemma = 'happy', $neg = 1
 
 =head1 METHODS
 

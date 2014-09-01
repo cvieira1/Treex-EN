@@ -1,9 +1,7 @@
 package Treex::Block::W2A::EN::TagLinguaEn;
-BEGIN {
-  $Treex::Block::W2A::EN::TagLinguaEn::VERSION = '0.08171';
-}
-use 5.010;
-use feature qw(switch);
+$Treex::Block::W2A::EN::TagLinguaEn::VERSION = '0.13095';
+use strict;
+use warnings;
 use Moose;
 use Treex::Core::Common;
 extends 'Treex::Core::Block';
@@ -44,55 +42,21 @@ sub _revert_form {    #because Lingua::EN::Tagger changes some forms to another,
 }
 
 
-# using new switch syntax
-sub _correct_lingua_tag {    # substitution according to http://search.cpan.org/src/ACOBURN/Lingua-EN-Tagger-0.13/README
-                             # puvodni tagset je na http://www.computing.dcu.ie/~acahill/tagset.html
+# Substitutions according to http://search.cpan.org/src/ACOBURN/Lingua-EN-Tagger-0.13/README
+# The PennTB tagset is described e.g. at http://www.computing.dcu.ie/~acahill/tagset.html
+sub _correct_lingua_tag {
     my ( $self, $linguatag, $wordform ) = @_;
     $linguatag = uc $linguatag; # newer versions of Lingua::EN::Tagger use lowercased tags
-    given ($linguatag) {
-        when ('DET') {
-            return 'DT';
-        }
-        when ('PRPS') {
-            return 'PRP$';
-        }
-        when (/^[LR]RB$/) {
-            return "-$linguatag-";
-        }
-        when (/^PP/) {       # allowed "tags" of punctuation mark in PennTB: #  $ '' ( ) , . : ``
-
-            given ($wordform) {
-
-                when (/^(?:#|$|''|,|\.|:|``)$/) {
-                    return $wordform;
-                }
-                when (/[\(\[\{]/) {
-                    return "-LRB-";
-                }
-                when (/[\)\]\}]/) {
-                    return "-RRB-";
-                }
-                default {
-                    return ".";
-                }
-
-            }
-        }
-        default {
-            return $linguatag;
-        }
-
-        # v lingua-taggeru maji pro punktuaci zvlastni tagy, to ale v ptb nebylo!
-
-        #  when ("LRB") {return "."}  # hack, zavorky totiz collins nesezere  - tyhle vsechny zameny by spis mely bejt ve wrapperu ke collinsu
-        #  when ("RRB") {return "."}
-        #  when ("PP" ) {return "."}
-        #  when ("PPL") {return "``"}
-        #  when ("PPR") {return "''"}
-        #  when ("PPC") {return ","}
-        #  when ("PPS") {return ","}    #POZOR, cunarna, tagger dava PPS pomlcce a Collins na tom pak pada, ale nevim, jaky tag teda patri
-
+    return 'DT' if $linguatag eq 'DET';
+    return 'PRP$' if $linguatag eq 'PRPS';
+    return "-$linguatag-" if $linguatag =~ /^[LR]RB$/;
+    if ($linguatag =~ /^PP/) {       # allowed "tags" of punctuation mark in PennTB: #  $ '' ( ) , . : ``
+        return $wordform if $wordform =~ /^(?:#|$|''|,|\.|:|``)$/;
+        return '-LRB-' if $wordform =~ /[\(\[\{]/;
+        return '-RRB-' if $wordform =~ /[\)\]\}]/;
+        return '.';
     }
+    return $linguatag;
 }
 
 sub process_zone {
@@ -165,7 +129,7 @@ Treex::Block::W2A::EN::TagLinguaEn
 
 =head1 VERSION
 
-version 0.08171
+version 0.13095
 
 =head1 DESCRIPTION
 

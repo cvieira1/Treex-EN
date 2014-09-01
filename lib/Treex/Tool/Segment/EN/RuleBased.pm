@@ -1,7 +1,7 @@
 package Treex::Tool::Segment::EN::RuleBased;
-BEGIN {
-  $Treex::Tool::Segment::EN::RuleBased::VERSION = '0.08171';
-}
+$Treex::Tool::Segment::EN::RuleBased::VERSION = '0.13095';
+use strict;
+use warnings;
 use utf8;
 use Moose;
 use Treex::Core::Common;
@@ -35,7 +35,7 @@ Treex::Tool::Segment::EN::RuleBased - rule based sentence segmenter for English
 
 =head1 VERSION
 
-version 0.08171
+version 0.13095
 
 =head1 DESCRIPTION
 

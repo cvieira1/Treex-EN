@@ -1,7 +1,7 @@
 package Treex::Tool::Tagger::Featurama::EN;
-BEGIN {
-  $Treex::Tool::Tagger::Featurama::EN::VERSION = '0.08171';
-}
+$Treex::Tool::Tagger::Featurama::EN::VERSION = '0.13095';
+use strict;
+use warnings;
 use Moose;
 extends 'Treex::Tool::Tagger::Featurama';
 
@@ -112,7 +112,7 @@ Treex::Tool::Tagger::Featurama::EN
 
 =head1 VERSION
 
-version 0.08171
+version 0.13095
 
 =head1 DESCRIPTION
 

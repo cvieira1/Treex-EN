@@ -1,19 +1,19 @@
 package Treex::Block::W2A::EN::ParseMSTperl;
-BEGIN {
-  $Treex::Block::W2A::EN::ParseMSTperl::VERSION = '0.08171';
-}
+$Treex::Block::W2A::EN::ParseMSTperl::VERSION = '0.13095';
+use strict;
+use warnings;
 use Moose;
 extends 'Treex::Block::W2A::ParseMSTperl';
 
-has 'model_name' => ( is => 'ro', isa => 'Str', default => 'conll_2007_small' );
-has 'model_dir' => ( is => 'ro', isa => 'Str', default => "data/models/mst_perl_parser/en" );
+has '+model_name' => ( default => 'conll_2007_small' );
+has '+model_dir' => ( default => 'data/models/parser/mst_perl/en' );
 
 has 'alignment_language' => ( isa => 'Str', is => 'ro', default => 'cs' );
 has 'alignment_is_backwards' => ( isa => 'Bool', is => 'ro', default => '0' );
 
 sub get_coarse_grained_tag {
     my ( $self, $tag ) = @_;
-    
+
     my $ctag = substr( $tag, 0, 2 );
 
     return $ctag;
@@ -22,20 +22,33 @@ sub get_coarse_grained_tag {
 1;
 
 __END__
- 
+
 =head1 NAME
 
 Treex::Block::W2A::EN::ParseMSTperl
 
 =head1 VERSION
 
-version 0.08171
+version 0.13095
 
 =head1 DECRIPTION
 
 MST parser adjusted to parsing English sentences.
 Just a lightweight wrapper for
-L<Treex::Block::W2A::ParseMSTperl> which is the parser itself.
+L<Treex::Block::W2A::ParseMSTperl> which is base clase.
+This class just sets the English model C<conll_2007_small> as the default
+and defines a method for obtaining coarse-grained PoS tags
+(first two characters of PennTB-like tags).
+
+The default model is very small and good only for testing and demonstration
+purposes.
+Use e.g. C<model_name=conll_2007_best> instead to get good results.
+
+=head1 SEE ALSO
+
+L<Treex::Block::W2A::ParseMSTperl>
+
+L<Treex::Tool::Parser::MSTperl::Parser>
 
 =head1 COPYRIGHT
 
